@@ -1,29 +1,24 @@
 
-import Contant from './components/Content'
-import Home from "./components/Home";
-import About from "./components/About";
-import Services from "./components/Services";
-import Gallery from "./components/Gallery";
+import Contant from './containers/Contant/Content'
+import Home from "./containers/Home/Home";
+import About from "./containers/About/About";
+
 const routerContants = {
-    contant: {
-        route: "/",
-        container: Contant,
-    },
     home: {
-        route: "home",
+        route: "/home",
         container: Home,
+        exact: true
     },
     about: {
         route: "/about",
         container: About,
+        exact: true
     },
-    services: {
-        route: "/services",
-        container: Services,
-    },
-    gallery: {
-        route: "/gallery",
-        container: Gallery,
+   
+    contant: {
+        route: "/",
+        container: Contant,
+        exact: false
     },
 };
 export default routerContants;

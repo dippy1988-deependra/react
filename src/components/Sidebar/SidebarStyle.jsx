@@ -36,5 +36,8 @@ export const SidebarNavItems = styled.button`
         background-color:#000000;
         color:#ffffff
       }
+      
+    ${props => props.isActive && `background-color:#000000;
+        color:#ffffff;`
+    }
 `;
-
