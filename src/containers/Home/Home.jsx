@@ -7,8 +7,11 @@ import Image from '../../images/download.png';
 import axios from 'axios';
 
 
+
 const Home = () => {
     const [posts,setPost]= useState([])
+    const [isPreviewShown, setPreviewShown] = useState(false);
+    
     useEffect(()=> {
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res => {
@@ -21,6 +24,7 @@ const Home = () => {
         })
     },[])
 
+ 
     
     return (
         <div>
@@ -38,9 +42,6 @@ const Home = () => {
                         </CardBody>
                     </Card>
                 ))}
-                    
-
-                    
                 </CardWrapper>
             </ContantWrapper>
         </div>

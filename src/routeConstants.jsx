@@ -2,8 +2,10 @@
 import Contant from './containers/Contant/Content'
 import Home from "./containers/Home/Home";
 import About from "./containers/About/About";
+import Login from "./containers/Login/Login";
 
 const routerContants = {
+    
     home: {
         route: "/home",
         container: Home,
@@ -16,8 +18,13 @@ const routerContants = {
     },
    
     contant: {
-        route: "/",
+        route: "/contant",
         container: Contant,
+        exact: false
+    },
+    login: {
+        route: "/",
+        container: Login,
         exact: false
     },
 };
